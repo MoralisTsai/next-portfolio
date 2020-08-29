@@ -64,7 +64,6 @@ export default class MyDocument extends Document {
             as="font"
             crossOrigin=""
           />
-          {/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;500;700&display=swap" rel="stylesheet"></link> */}
         </Head>
         <body>
           <Main />
