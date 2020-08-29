@@ -27,4 +27,12 @@ export const Font = createGlobalStyle`
     src: local('Noto Sans TC Bold'), local('NotoSansTC-Bold'),
         url('/fonts/NotoSansTC-Bold.woff') format('woff'),
   }
+
+  @font-face {
+    font-family: 'Permanent Marker';
+    font-style: normal;
+    font-display: swap;
+    src: local('Permanent Marker'), local('PermanentMarker'),
+        url('/fonts/PermanentMarker.woff') format('woff'),
+  }
 `;

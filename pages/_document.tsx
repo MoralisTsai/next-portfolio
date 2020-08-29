@@ -47,22 +47,28 @@ export default class MyDocument extends Document {
            * Reference: https://codeconqueror.com/blog/using-google-fonts-with-next-js
            */}
           <link
-            rel="preload"
-            href="/fonts/NotoSansTC-Thin.woff"
-            as="font"
-            crossOrigin=""
+            rel='preload'
+            href='/fonts/NotoSansTC-Thin.woff'
+            as='font'
+            crossOrigin=''
           />
           <link
-            rel="preload"
-            href="/fonts/NotoSansTC-Medium.woff"
-            as="font"
-            crossOrigin=""
+            rel='preload'
+            href='/fonts/NotoSansTC-Medium.woff'
+            as='font'
+            crossOrigin=''
           />
           <link
-            rel="preload"
-            href="/fonts/NotoSansTC-Bold.woff"
-            as="font"
-            crossOrigin=""
+            rel='preload'
+            href='/fonts/NotoSansTC-Bold.woff'
+            as='font'
+            crossOrigin=''
+          />
+          <link
+            rel='preload'
+            href='/fonts/PermanentMarker.woff'
+            as='font'
+            crossOrigin=''
           />
         </Head>
         <body>
