@@ -1,9 +1,17 @@
 import React from 'react';
-import Document, { DocumentContext, Head, Main, NextScript, Html } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import Document, {
+  DocumentContext,
+  Head,
+  Main,
+  NextScript,
+  Html,
+} from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext): Promise<{
+  static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<{
     styles: JSX.Element;
     html: string;
     head?: JSX.Element[];
@@ -12,7 +20,7 @@ export default class MyDocument extends Document {
      * Server side styled-components setup
      * Ref: https://github.com/vercel/next.js/blob/master/examples/with-styled-components/pages/_document.js
      */
-    
+
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
@@ -38,7 +46,7 @@ export default class MyDocument extends Document {
     }
   }
 
-  render():JSX.Element {
+  render(): JSX.Element {
     return (
       <Html>
         <Head>
@@ -46,30 +54,10 @@ export default class MyDocument extends Document {
            * Loads google fonts locally
            * Reference: https://codeconqueror.com/blog/using-google-fonts-with-next-js
            */}
-          <link
-            rel='preload'
-            href='/fonts/NotoSansTC-Thin.woff'
-            as='font'
-            crossOrigin=''
-          />
-          <link
-            rel='preload'
-            href='/fonts/NotoSansTC-Medium.woff'
-            as='font'
-            crossOrigin=''
-          />
-          <link
-            rel='preload'
-            href='/fonts/NotoSansTC-Bold.woff'
-            as='font'
-            crossOrigin=''
-          />
-          <link
-            rel='preload'
-            href='/fonts/PermanentMarker.woff'
-            as='font'
-            crossOrigin=''
-          />
+          <link href='/fonts/NotoSansTC-Thin.woff' as='font' crossOrigin='' />
+          <link href='/fonts/NotoSansTC-Medium.woff' as='font' crossOrigin='' />
+          <link href='/fonts/NotoSansTC-Bold.woff' as='font' crossOrigin='' />
+          <link href='/fonts/PermanentMarker.woff' as='font' crossOrigin='' />
         </Head>
         <body>
           <Main />

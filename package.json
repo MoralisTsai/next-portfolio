@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "next": "^9.5.2",
+    "polished": "^3.6.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",

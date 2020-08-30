@@ -5,6 +5,8 @@ import { Color } from 'styles/Color';
 
 import { ImageLoader } from 'components/Shared/ImageLoader';
 
+import { CoverProps } from './ts/Cover';
+
 const Container = styled.header`
   width: 100%;
   height: 100vh;
@@ -77,20 +79,18 @@ const FigureImage = (src: string, style: React.CSSProperties) => {
   return <div style={localStyle} />;
 };
 
-export const Cover: React.FC<unknown> = () => {
+export const Cover: React.FC<CoverProps> = ({ content: { cover } }) => {
   return (
     <Container>
       <Main>
         <MainInner>
           <TextualLogo>M</TextualLogo>
-          <h3>ㄋㄧˇ ㄏㄠˇ</h3>
+          <h3>{cover.greeting}</h3>
           <Introduction>
-            <h4>我是</h4>
+            <h4>{cover.introduction}</h4>
             <mark>Moralis</mark>
           </Introduction>
-          <InnerText>
-            來台已有八年的印尼人。個性內向，但同時喜歡投入人群，曾參與多次國際志工活動。我擅長將複雜的問題拆解，分析並逐一處理至底。我常反思如何從被動的使用者，成為締造潮流的開發者，因此，逐漸走入程式這條路，期待因為自己設計，給予受眾更不一樣的體驗。目前在一家大數據媒體公司擔任軟體工程師，已有三年軟體開發經驗。
-          </InnerText>
+          <InnerText>{cover.description}</InnerText>
         </MainInner>
       </Main>
       <Figure>
