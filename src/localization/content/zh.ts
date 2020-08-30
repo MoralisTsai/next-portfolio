@@ -149,6 +149,7 @@ export const zh = {
   },
   snapSeries: {
     title: '隨拍系列',
+    more: '更多',
   },
   about: {
     title: '關於',

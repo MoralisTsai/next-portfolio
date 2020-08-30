@@ -4,6 +4,7 @@ import { Cover } from 'components/Cover';
 import { Coding } from 'components/Coding';
 import { Film } from 'components/Film';
 import { Photography } from 'components/Photography';
+import { Snap } from 'components/Snap';
 
 import { language, LanguageOption } from 'localization';
 
@@ -20,6 +21,7 @@ export default function App(): JSX.Element {
       <Coding content={localLanguage} />
       <Film content={localLanguage} />
       <Photography content={localLanguage} />
+      <Snap content={localLanguage} />
     </>
   );
 }

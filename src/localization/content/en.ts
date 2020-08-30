@@ -149,6 +149,7 @@ export const en = {
   },
   snapSeries: {
     title: 'Snap Series',
+    more: 'more',
   },
   about: {
     title: 'About',
