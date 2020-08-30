@@ -60,7 +60,6 @@ export const CardTechStack = styled.dl`
   }
 
   dd {
-    font-weight: 500;
     color: ${Color.TUNDORA};
     font-size: 1rem;
   }
