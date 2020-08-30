@@ -6,10 +6,7 @@ import { Color } from 'styles/Color';
 const Container = styled.div`
   color: ${Color.WHITE};
   line-height: 1.88;
-
-  &:not(:last-of-type) {
-    margin-bottom: 120px;
-  }
+  margin-bottom: 120px;
 
   h2 {
     font-size: 1.5rem;

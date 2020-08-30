@@ -8,11 +8,12 @@ import { Snap } from 'components/Snap';
 import { About } from 'components/About';
 import { Experience } from 'components/Experience';
 import { ChitChat } from 'components/ChitChat';
+import { Footer } from 'components/Footer';
 
 import { language, LanguageOption } from 'localization';
 
 export default function App(): JSX.Element {
-  const [localLanguage, setLanguage] = React.useState(language.zh);
+  const [localLanguage, setLanguage] = React.useState(language.en);
 
   const changeLanguageAction = (type: LanguageOption) => {
     setLanguage(language[type]);
@@ -28,6 +29,7 @@ export default function App(): JSX.Element {
       <About content={localLanguage} />
       <Experience content={localLanguage} />
       <ChitChat content={localLanguage} />
+      <Footer content={localLanguage} />
     </>
   );
 }
