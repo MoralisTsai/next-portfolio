@@ -78,7 +78,7 @@ export const en = {
           },
           {
             title: 'Cinematographer',
-            member: ['Moralis Tsai'],
+            member: ['MORALIS'],
           },
           {
             title: 'Art Director',
@@ -106,7 +106,7 @@ export const en = {
           },
           {
             title: 'Cinematographer',
-            member: ['Moralis Tsai'],
+            member: ['MORALIS'],
           },
           {
             title: 'Art Director',

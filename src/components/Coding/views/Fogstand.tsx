@@ -48,6 +48,10 @@ const FAArticleWrapper = styled.div`
   }
 `;
 
+const CScreenshotsWrapper = styled(ScreenshotsWrapper)`
+  margin-top: 0;
+`;
+
 export const Fogstand: React.FC<LanguageSchema> = ({ content }) => {
   const { name, items } = content.coding;
 
@@ -107,7 +111,7 @@ export const Fogstand: React.FC<LanguageSchema> = ({ content }) => {
           </div>
         </CCardWrapper>
       </FAArticleWrapper>
-      <ScreenshotsWrapper>
+      <CScreenshotsWrapper>
         <ScreenshotsRow>
           <picture>
             <source
@@ -180,7 +184,7 @@ export const Fogstand: React.FC<LanguageSchema> = ({ content }) => {
             <img src={require('../assets/fogstand7.jpg')} />
           </picture>
         </ScreenshotsRow>
-      </ScreenshotsWrapper>
+      </CScreenshotsWrapper>
     </>
   );
 };
