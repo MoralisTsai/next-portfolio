@@ -12,6 +12,7 @@ import { More } from './views/More';
 
 const Main = styled.main`
   background-color: ${Color.TUNDORA};
+  padding-bottom: 100px;
 `;
 
 export const Film: React.FC<LanguageSchema> = ({ content }) => {
