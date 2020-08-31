@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 import Document, {
   DocumentContext,
   Head,
   Main,
   NextScript,
   Html,
-} from "next/document";
-import { ServerStyleSheet } from "styled-components";
+} from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -51,12 +51,12 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;500;700&display=swap"
-            rel="stylesheet"
+            href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;500;700&display=swap'
+            rel='stylesheet'
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
-            rel="stylesheet"
+            href='https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'
+            rel='stylesheet'
           ></link>
         </Head>
         <body>

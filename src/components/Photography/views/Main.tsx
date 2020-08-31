@@ -27,7 +27,7 @@ const WorkMeta = styled.article`
   line-height: 1.5;
   max-width: 350px;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 80px;
 
   h2 {
     color: ${Color.MINE_SHAFT};
@@ -57,6 +57,7 @@ const WorkMeta = styled.article`
   }
 
   ${Responsive.tablet`
+    padding: 0 20px;
     h2 {
       align-self: center;
     }

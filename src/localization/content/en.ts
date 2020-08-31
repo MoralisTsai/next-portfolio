@@ -3,7 +3,7 @@ export const en = {
     greeting: 'Hello,',
     introduction: 'My name is',
     description:
-      'Indonesian born Chinese who has been living in Taiwan for eight years. And as an introvert, I still enjoy being around people, and have participated in several international volunteerings. Passionate at disassembling, analyzing and dealing with complex problems. Currently working as a software engineer in a big data media company with three years of software development experience.',
+      'As an Indonesian, I’ve been living in Taiwan for eight years. And as an introvert, I still enjoy being around people, and have participated in several international volunteerings. Passionate at disassembling, analyzing and dealing with complex problems. Currently working as a software engineer in a big data media company with three years of software development experience.',
   },
   portfolio: 'PORTFOLIO',
   coding: {
@@ -12,7 +12,7 @@ export const en = {
       {
         title: 'SparkAmplify - Intelligent Media Outreach',
         description:
-          'Founded in 2016, a data-driven SaaS platform that facilitates the communication between brands and media. Currently has assisted more than 1,500 users, across 5 countries in completing content distribution, including Enterprise Singapore, Taiwan External Trade Development Council, and Japan External Trade Organization.',
+          'Founded in 2016, SparkAmplify is a data-driven SaaS platform that facilitates the communication between brands and media. Currently it has assisted more than 1500 users, across 5 countries in content distribution, including Enterprise Singapore, Taiwan External Trade Development Council, and Japan External Trade Organization.',
         tech: [
           {
             title: 'Written in',
@@ -35,7 +35,7 @@ export const en = {
       {
         title: 'Fogstand Gravity',
         description:
-          "This work is primarily based on an exclusive interview with a talented artist and key founder of the Liwu Workshop, Chen Wen Li, talking about an idea of bringing Western contemporary art into her growing aboriginal community, and observed how residents had instantly transformed their role from a watcher into a creator. After nine months of follow-up, we had much interaction with the residents and heard a wide range of opinions, so we reorganized the interview content and published it as a book. To allow more people to read this book without geographical restrictions, I designed and wrote the website built on top of the React library and It took ten days from framing to fulfillment and went live in May 2017. The website uses the word 'Li' (it can mean establishing something in Chinese) to adopt a simple, stable and neat design idea, and uses black and white as the main color tone. Without overmuch visual interference, it focuses on telling the story of the six interviewees.",
+          "This project was primarily based on an exclusive interview with a talented artist and founder of the Liwu Workshop, Chen Wen Li and talk about the idea of bringing the western contemporary art into the aboriginal community where she grew up, and see how it influenced the residents from switching their positions of bystanders to creators. After spending time with the residents for nine months, we had collected a wide range of opinions, therefore we decided to reorganize the interviews and publish a book based on them. To let more people read this book without geographical restrictions, I designed and wrote the website built on top of the React library. It took me ten days from framing to fulfillment and went live in May 2017. The website uses the word 'Li', which refers to “initiate” in Chinese. With a simple and subtle concept in mind,  the design adopts black and white as the main color without overmuch visual interference that brings the focus back to the storytelling of six interviewees.",
         tech: [
           {
             title: 'Written in',
@@ -66,7 +66,7 @@ export const en = {
         title: 'Resonance',
         award: '2014 Sunkey Award Honorable Mention',
         description:
-          "By gathering the cultural resonance of the same generation, we produce a short film based on the characteristics of the 'Sunkey Bubble Green Tea' product with the promotional slogan 'Spend only NT$10, you can derive unbeatable satisfaction from the drink.' Therefore, we intentionally use the ten yuan as an idea, correlate these ten yuan into the film, and finally create an unexpected plot and deepen the audience's impression.",
+          'By gathering the cultural resonance of the same generation, we produce a short film based on the characteristics of the "Sunkey Bubble Green Tea" with a promotional slogan "Spend NT$10, and drink up massive satisfaction." Therefore, we intentionally use the ten yuan as an idea, correlate these ten yuan into the film, and finally create an unexpected plot and deepen the audience\'s impression.',
         crew: [
           {
             title: 'Cast',
@@ -91,10 +91,10 @@ export const en = {
         ],
       },
       {
-        title: 'Hope',
-        award: '2014 TCU Bio Medicine Bronze Award',
+        title: 'Vision II',
+        award: '2015 TCU Bio Medicine Bronze Award',
         description:
-          'The core theme of this film is to arouse audience awareness about the environmental problems that we face right now. As human beings, we should not only care about ourselves and intentionally ignore the possible harm caused by the vicious consumption of resources. We should review the past and look forward to the future. With the narrative shooting method, we invite two protagonists to articulate their thoughts about life and actions they can take to achieve the modest goal of environmental sustainability, and finally hope the audience gain some fundamental ideas from it and start to act.',
+          'The main purpose of this film is to raise audience awareness in environmental problems that we are currently facing. As human beings, we shouldn’t just care for ourselves and ignore the possible harm caused by the vicious resource consumptions. We should learn from the past and lean into the future. With the narrative shooting method, we invite two protagonists to articulate their thoughts about life and actions they can take to achieve the modest goal of environmental sustainability, and hopefully the audience may gain some fundamental ideas from it and start to take actions.',
         crew: [
           {
             title: 'Cast',
@@ -121,12 +121,12 @@ export const en = {
         {
           title: 'Hug',
           description:
-            'For an Indonesian who has just arrived in Taiwan, Taipei always has an extremely special meaning to me. For Taipei people, it is a relationship, involving and intersecting uniquely. In the early stage of the film, we express the indifference between people, and finally, we use the indirect method to point out the warm moment, which completely changes our impression of the city.',
+            'For an Indonesian who just arrived in Taiwan, Taipei has always meant something to me. For locals, it is merely an affection, involving and intersecting uniquely. In the early stage of the film, we express the indifference between people, and finally, we use the indirect method to point out the warm moment, which completely changes our impression of the city.',
         },
         {
           title: 'Vision',
           description:
-            "It mainly explains the social impact of the Fear of Missing Out (FOMO) in modern society, caused by the widespread use of social media. Many people in today's world use their phones to resolve embarrassment,  as a tool to escape reality and willingly spend most of their time focusing on other persons' lives, but ignore the people and things around them that justly deserve more attention. The film uses a contrastive narrative approach, opening with resonating fragments, and then using a 'seemingly ... actually' narrative style to naturally draw people's reflection.",
+            'It explains the social impact of the Fear of Missing Out (FOMO) in modern society, caused by the widespread use of social media. Today people often use phones to deal with embarrassment as a tool to escape reality. Instead of paying attention to what happens around them, people nowadays rather spend most of their time on other people’s lives. The film starts with a contrastive narrative approach with resonating elements, and uses a "seemingly ... actually" narrative style to naturally draw people\'s reflection.',
         },
         {
           title: 'Satoyama Spirit',
@@ -143,7 +143,7 @@ export const en = {
         title: 'C/C',
         place: 'Hualien County, Taiwan',
         description:
-          'This work attempts to capture the daily life of a hair salon in Hualien with a traditional SLR camera. From the black and white barber chair, the large mirror attached to the wall, and the space without too much decoration, it can reflect the temperature between the customer and the barber.',
+          'This work attempts to capture the daily life of a hair salon in Hualien with a traditional SLR camera. From the black and white barber chair, large mirror on the wall, and spacious room without much decoration, it reflects the temperature between the customer and the barber.',
       },
     ],
   },
@@ -170,7 +170,7 @@ export const en = {
         company: 'SparkAmplify',
         period: 'Since September 2017',
         description:
-          'SparkAmplify is a SaaS company based in Pasadena, California and Taipei, specializing in media outreach and influencer engagement. The platform provides users targeted media and journalist profile as well as intelligent recommendations.',
+          'SparkAmplify is a SaaS company based in Pasadena, California and Taipei, specializing in media outreach and influencer engagement. The platform provides users target media and journalist profile as well as intelligent recommendations.',
         jobs: [
           'Build maintainable web applications using the modern JavaScript frameworks, including Next, React and Express',
           'Create and extend Node backend APIs to power new functionality',
@@ -183,7 +183,7 @@ export const en = {
         company: 'DaAi Television',
         period: '2015.09 - 2016.01',
         description:
-          "'Earth Testimony' is an educational program broadcast daily by DaAi TV with a selection of domestic and foreign documentaries. The content covers the fields of society, culture, art, science, nature, etc. Watching a documentary is equivalent to returning to the historical scene, or imagining the future or exploring the unknown.",
+          '"Earth Testimony" is an educational program broadcast daily by DaAi TV with a selection of domestic and foreign documentaries. The content covers the fields of society, culture, art, science, nature, etc. Watching a documentary is equivalent to returning to the historical scene, or imagining the future or exploring the unknown.',
         jobs: [
           'Edit trailers',
           'Translate subtitles into Indonesian language',
@@ -198,7 +198,6 @@ export const en = {
           'Founded in 1998, Public Television Service (PTS) is the leading public service broadcaster in Taiwan. As an independent nonprofit organization, PTS aims to provide quality programming services covering a wide range of categories to present the diversity and creativity of Taiwan, free from commercial or political interference.',
         jobs: [
           'Convert television program into HDCam format',
-          'Translate subtitles into Indonesian language',
           'Manage the library system',
         ],
       },
@@ -218,9 +217,9 @@ export const en = {
           'Abundant living requirements and convenient traffic routes, education level is higher than in Indonesia and offers a lot of scholarships to international students, and Taiwanese are super nice.',
       },
       {
-        question: 'Why do your Chinese sound like Taiwanese people?',
+        question: 'Why does your Chinese sound like Taiwanese people?',
         answer:
-          'Since one-third of the residents are Chinese, most of them are from Fujian and Teochew. Therefore, many parents will typically send their children to Chinese tuition centers in elementary schools, so I was capable of speaking Chinese fluently before coming to Taiwan. ',
+          'Since one-third of the residents are Chinese, most of them are from Fujian and Teochew. Therefore, most of the parents will send their children to Chinese tuition centers in elementary schools, so I was capable of speaking Chinese fluently before coming to Taiwan.',
       },
       {
         question: "What's your favorite food in Taiwan?",
