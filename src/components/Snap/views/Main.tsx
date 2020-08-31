@@ -4,6 +4,7 @@ import { rgba } from 'polished';
 
 import { Responsive } from 'styles/Responsive';
 import { Color } from 'styles/Color';
+import { Hover } from 'styles/Hover';
 
 import { LanguageSchema } from 'localization';
 
@@ -84,9 +85,9 @@ const SeeMore = styled.a`
   font-weight: 100;
   margin-top: 100px;
 
-  &:hover {
+  ${Hover`
     color: ${rgba(Color.TUNDORA, 0.3)}!important;
-  }
+  `}
 
   ${Responsive.tablet`
     margin-top: 40px;

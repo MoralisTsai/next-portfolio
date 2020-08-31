@@ -5,6 +5,7 @@ import { rgba } from 'polished';
 
 import { Color } from 'styles/Color';
 import { Responsive } from 'styles/Responsive';
+import { Hover } from 'styles/Hover';
 
 import { ImageLoader } from 'components/Shared/ImageLoader';
 
@@ -181,6 +182,35 @@ const MobileContainer = styled.header`
   `}
 `;
 
+const LanguageOption = styled.div`
+  line-height: 1.3;
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+  left: 20px;
+`;
+
+interface LanguageItemProps {
+  active: boolean;
+}
+
+const LanguageItem = styled.span`
+  font-weight: ${(props: LanguageItemProps) => (props.active ? 700 : 100)};
+  font-size: 0.825rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  color: ${(props: LanguageItemProps) =>
+    props.active ? Color.WHITE : rgba(Color.WHITE, 0.6)};
+
+  &:first-child {
+    margin-right: 20px;
+  }
+
+  ${Hover`
+    color: ${rgba(Color.WHITE, 0.4)};
+  `}
+`;
+
 const FigureImage = (src: string, style: React.CSSProperties) => {
   const localStyle = Object.assign(style, {
     backgroundImage: `url(${src})`,
@@ -191,9 +221,29 @@ const FigureImage = (src: string, style: React.CSSProperties) => {
   return <div style={localStyle} />;
 };
 
-export const Cover: React.FC<CoverProps> = ({ content: { cover } }) => {
+export const Cover: React.FC<CoverProps> = ({
+  content: { cover },
+  changeLanguage,
+  language,
+}) => {
   return (
     <>
+      <LanguageOption>
+        <LanguageItem
+          onClick={() => changeLanguage('en')}
+          role='presentation'
+          active={language === 'en'}
+        >
+          EN
+        </LanguageItem>
+        <LanguageItem
+          onClick={() => changeLanguage('zh')}
+          role='presentation'
+          active={language === 'zh'}
+        >
+          繁
+        </LanguageItem>
+      </LanguageOption>
       {
         // @ts-ignore
         <Container src={require('./assets/self-portrait-small.jpg')}>

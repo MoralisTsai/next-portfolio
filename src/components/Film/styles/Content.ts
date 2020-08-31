@@ -3,6 +3,7 @@ import { rgba } from 'polished';
 
 import { Responsive } from 'styles/Responsive';
 import { Color } from 'styles/Color';
+import { Hover } from 'styles/Hover';
 
 export const InnerContent = styled.div`
   max-width: 1280px;
@@ -84,9 +85,9 @@ export const Play = styled.a`
   cursor: pointer;
   font-weight: 700;
 
-  &:hover {
+  ${Hover`
     color: ${rgba(Color.WHITE, 0.5)}!important;
-  }
+  `}
 
   ${Responsive.tablet`
     display: block;

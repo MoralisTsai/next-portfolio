@@ -13,23 +13,29 @@ import { Footer } from 'components/Footer';
 import { language, LanguageOption } from 'localization';
 
 export default function App(): JSX.Element {
-  const [localLanguage, setLanguage] = React.useState(language.en);
+  const [localLanguage, setLanguage] = React.useState('en' as LanguageOption);
+
+  const content = React.useMemo(() => language[localLanguage], [localLanguage]);
 
   const changeLanguageAction = (type: LanguageOption) => {
-    setLanguage(language[type]);
+    setLanguage(type);
   };
 
   return (
     <>
-      <Cover changeLanguage={changeLanguageAction} content={localLanguage} />
-      <Coding content={localLanguage} />
-      <Film content={localLanguage} />
-      <Photography content={localLanguage} />
-      <Snap content={localLanguage} />
-      <About content={localLanguage} />
-      <Experience content={localLanguage} />
-      <ChitChat content={localLanguage} />
-      <Footer content={localLanguage} />
+      <Cover
+        changeLanguage={changeLanguageAction}
+        content={content}
+        language={localLanguage}
+      />
+      <Coding content={content} />
+      <Film content={content} />
+      <Photography content={content} />
+      <Snap content={content} />
+      <About content={content} />
+      <Experience content={content} />
+      <ChitChat content={content} />
+      <Footer content={content} />
     </>
   );
 }

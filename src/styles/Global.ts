@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { Hover } from 'styles/Hover';
 
 export const Global = createGlobalStyle`
   html,
@@ -14,8 +15,8 @@ export const Global = createGlobalStyle`
       color: inherit;
     }
 
-    &:hover {
+    ${Hover`
       transition: all ease-in-out 0.1s;
-    }
+    `}
   }
 `;

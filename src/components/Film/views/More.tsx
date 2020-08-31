@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { rgba } from 'polished';
 
+import { Hover } from 'styles/Hover';
 import { Responsive } from 'styles/Responsive';
 
 import { LanguageSchema } from 'localization';
@@ -91,9 +92,9 @@ const Card = styled.section`
     margin-bottom: 40px;
     display: inline-block;
 
-    &:hover {
+    ${Hover`
       color: ${rgba(Color.WHITE, 0.5)}!important;
-    }
+    `}
   }
 
   p {
