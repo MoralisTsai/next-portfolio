@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import Document, {
   DocumentContext,
   Head,
   Main,
   NextScript,
   Html,
-} from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+} from "next/document";
+import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -50,14 +50,14 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/**
-           * Loads google fonts locally
-           * Reference: https://codeconqueror.com/blog/using-google-fonts-with-next-js
-           */}
-          <link href='/fonts/NotoSansTC-Thin.woff' as='font' crossOrigin='' />
-          <link href='/fonts/NotoSansTC-Medium.woff' as='font' crossOrigin='' />
-          <link href='/fonts/NotoSansTC-Bold.woff' as='font' crossOrigin='' />
-          <link href='/fonts/PermanentMarker.woff' as='font' crossOrigin='' />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;500;700&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+            rel="stylesheet"
+          ></link>
         </Head>
         <body>
           <Main />
