@@ -36,6 +36,7 @@ const Title = styled.h1`
   writing-mode: vertical-lr;
 
   ${Responsive.laptop`
+    line-height: 1.8;
     writing-mode: initial;
     font-size: 5rem;
     margin-bottom: 100px;

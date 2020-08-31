@@ -70,6 +70,7 @@ const WorkMeta = styled.article`
   ${Responsive.mobile`
     h2 {
       align-self: center;
+      text-align: center;
     }
 
     p {
