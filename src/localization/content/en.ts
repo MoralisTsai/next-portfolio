@@ -35,7 +35,7 @@ export const en = {
       {
         title: 'Fogstand Gravity',
         description:
-          "This project was primarily based on an exclusive interview with a talented artist and founder of the Liwu Workshop, Chen Wen Li and talk about the idea of bringing the western contemporary art into the aboriginal community where she grew up, and see how it influenced the residents from switching their positions of bystanders to creators. After spending time with the residents for nine months, we had collected a wide range of opinions, therefore we decided to reorganize the interviews and publish a book based on them. To let more people read this book without geographical restrictions, I designed and wrote the website built on top of the React library. It took me ten days from framing to fulfillment and went live in May 2017. The website uses the word 'Li', which refers to “initiate” in Chinese. With a simple and subtle concept in mind,  the design adopts black and white as the main color without overmuch visual interference that brings the focus back to the storytelling of six interviewees.",
+          'This project was primarily based on an exclusive interview with a talented artist and founder of the Liwu Workshop, Chen Wen Li and talk about the idea of bringing the western contemporary art into the aboriginal community where she grew up, and see how it influenced the residents from switching their positions of bystanders to creators. After spending time with the residents for nine months, we had collected a wide range of opinions, therefore we decided to reorganize the interviews and publish a book based on them. To let more people read this book without geographical restrictions, I designed and wrote the website built on top of the React library. It took me ten days from framing to fulfillment and went live in May 2017. The website uses the word \'Li\', which refers to "initiate" in Chinese. With a simple and subtle concept in mind,  the design adopts black and white as the main color without overmuch visual interference that brings the focus back to the storytelling of six interviewees.',
         tech: [
           {
             title: 'Written in',
@@ -154,7 +154,7 @@ export const en = {
   about: {
     title: 'About',
     basic: {
-      name: 'Moralis Tsai',
+      name: 'Moralis',
       email: 'moralis.tsai@gmail.com',
       bachelor: 'Tzu Chi University Department of Communication Studies',
       master:
