@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Color } from 'styles/Color';
+import { Responsive } from 'styles/Responsive';
 
 import { LanguageSchema } from 'localization';
 
@@ -9,6 +10,10 @@ const Wrapper = styled.section`
   margin: 50px auto 100px;
   line-height: 1.5;
   font-weight: 700;
+
+  ${Responsive.laptop`
+    margin: 0 auto 60px;
+  `}
 `;
 
 interface FluidProps {
@@ -29,6 +34,16 @@ const Fluid = styled.div`
   justify-content: center;
   flex-flow: column nowrap;
   position: relative;
+
+  ${Responsive.tablet`
+    max-width: 400px;
+    height: 400px;
+  `}
+
+  ${Responsive.mobile`
+    max-width: 280px;
+    height: 280px;
+  `}
 `;
 
 const InnerFluid = styled.article`
@@ -49,6 +64,22 @@ const InnerFluid = styled.article`
     color: ${Color.TUNDORA};
     opacity: 0.69;
   }
+
+  ${Responsive.tablet`
+    h2 {
+      font-size: 5rem;
+    }
+  `}
+
+  ${Responsive.mobile`
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    h3 {
+      font-size: 0.875rem;
+    }
+  `}
 `;
 
 export const Header: React.FC<LanguageSchema> = ({ content }) => {

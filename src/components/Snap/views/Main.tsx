@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { rgba } from 'polished';
 
+import { Responsive } from 'styles/Responsive';
 import { Color } from 'styles/Color';
 
 import { LanguageSchema } from 'localization';
@@ -10,6 +11,16 @@ const ImageContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
+  padding: 0 70px;
+
+  ${Responsive.tablet`
+    padding: 0 50px;
+    flex-flow: column nowrap;
+  `}
+
+  ${Responsive.mobile`
+    padding: 0 20px;
+  `}
 `;
 
 const ImagesColumn = styled.div`
@@ -33,6 +44,34 @@ const ImagesColumn = styled.div`
   &:nth-child(3) {
     padding-top: 100px;
   }
+
+  ${Responsive.tablet`
+    &:not(:last-of-type) {
+      margin: 0;
+    }
+
+    &:nth-child(1) {
+      padding: 0;
+    }
+
+    &:nth-child(3) {
+      padding: 0;
+    }
+
+    picture {
+      img {
+        margin-bottom: 30px;
+      }
+    }
+  `}
+
+  ${Responsive.tablet`
+    picture {
+      img {
+        margin-bottom: 20px;
+      }
+    }
+  `}
 `;
 
 const SeeMore = styled.a`
@@ -43,10 +82,16 @@ const SeeMore = styled.a`
   text-align: center;
   display: block;
   font-weight: 100;
+  margin-top: 100px;
 
   &:hover {
     color: ${rgba(Color.TUNDORA, 0.3)}!important;
   }
+
+  ${Responsive.tablet`
+    margin-top: 40px;
+    font-size: 1rem;
+  `}
 `;
 
 export const Main: React.FC<LanguageSchema> = ({ content }) => {

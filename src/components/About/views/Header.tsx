@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Responsive } from 'styles/Responsive';
 import { Color } from 'styles/Color';
 
 import { LanguageSchema } from 'localization';
@@ -19,6 +20,10 @@ const Title = styled.h1`
   margin-bottom: 200px;
   text-align: center;
   margin-bottom: 100px;
+
+  ${Responsive.mobile`
+    margin-bottom: 50px;
+  `}
 `;
 
 const Avatar = styled.picture`
@@ -43,6 +48,15 @@ const Info = styled.div`
       margin-bottom: 30px;
     }
   }
+
+  ${Responsive.mobile`
+    p {
+      font-size: 1rem;
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+  `}
 `;
 
 export const Header: React.FC<LanguageSchema> = ({ content }) => {

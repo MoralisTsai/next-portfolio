@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Responsive } from 'styles/Responsive';
 import { Color } from 'styles/Color';
 
 import { LanguageSchema } from 'localization';
@@ -10,6 +11,18 @@ import { QAItem } from './views/QAItem';
 const Container = styled.div`
   background-color: ${Color.MINE_SHAFT};
   padding: 100px;
+
+  ${Responsive.laptop`
+    padding: 100px 70px;
+  `}
+
+  ${Responsive.tablet`
+    padding: 80px 50px;
+  `}
+
+  ${Responsive.mobile`
+    padding: 50px 20px;
+  `}
 `;
 
 const Wrapper = styled.section`
@@ -18,9 +31,15 @@ const Wrapper = styled.section`
 `;
 
 const Title = styled.h1`
-  font-size: 12.5rem;
+  font-size: 10rem;
   color: ${Color.WHITE};
   writing-mode: vertical-lr;
+
+  ${Responsive.laptop`
+    writing-mode: initial;
+    font-size: 5rem;
+    margin-bottom: 100px;
+  `}
 `;
 
 const QAWrapper = styled.div`

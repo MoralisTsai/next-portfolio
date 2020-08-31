@@ -1,18 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Responsive } from 'styles/Responsive';
+
 import { LanguageSchema } from 'localization';
 
 const Container = styled.section`
   max-width: 1440px;
   width: 100%;
-  margin: 100px auto;
+  margin: 100px auto 250px;
   position: relative;
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 250px;
 
   h1 {
     writing-mode: vertical-lr;
@@ -27,6 +28,22 @@ const Container = styled.section`
     max-width: 950px;
     width: 100%;
   }
+
+  ${Responsive.tablet`
+    margin: 70px auto 200px;
+    h1 {
+      font-size: 7rem;
+      margin-right: 20px;
+    }
+  `}
+
+  ${Responsive.mobile`
+    margin: 50px auto 190px;
+    h1 {
+      font-size: 4.5rem;
+      margin-right: 10px;;
+    }
+  `}
 `;
 
 const Title = styled.h1``;

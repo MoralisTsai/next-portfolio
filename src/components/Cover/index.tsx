@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from 'react';
 import styled from 'styled-components';
+import { rgba } from 'polished';
 
 import { Color } from 'styles/Color';
+import { Responsive } from 'styles/Responsive';
 
 import { ImageLoader } from 'components/Shared/ImageLoader';
 
@@ -17,15 +20,64 @@ const Container = styled.header`
   flex-flow: row nowrap;
   overflow: hidden;
   line-height: 1.8;
+  position: relative;
 
   > section {
     flex: 1 1 50%;
   }
+
+  ${Responsive.laptop`
+    font-size: 1.25rem;
+    background-image: ${(props: MainProps) => `url(${props.src})`};
+    background-size: cover;
+    background-position: center;
+  
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: ${Color.TUNDORA};
+      opacity: 0.85;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    > section {
+      flex: 1 1 100%;
+    }
+  `}
+
+  ${Responsive.mobile`
+    background: initial;
+    background-color: ${Color.MINE_SHAFT};
+
+    &::after {
+      display: none;
+    }
+  `}
 `;
 
+interface MainProps {
+  src: string;
+}
+
 const Main = styled.section`
-  padding: 70px 20px;
+  padding: 70px 50px;
   font-size: 1.5rem;
+
+  ${Responsive.laptop`
+    align-self: flex-end;
+    padding: 50px;
+  `}
+
+  ${Responsive.mobile`
+    align-self: center;
+    padding: 0;
+  `}
 `;
 
 const MainInner = styled.div`
@@ -35,6 +87,20 @@ const MainInner = styled.div`
   display: flex;
   flex-flow: column nowrap;
   font-weight: 700;
+  z-index: 10;
+  position: relative;
+
+  ${Responsive.laptop`
+    margin: initial;
+  `}
+
+  ${Responsive.mobile`
+    align-items: center;
+    justify-content: center;
+    h3 {
+      display: none;
+    }
+  `}
 `;
 
 const TextualLogo = styled.article`
@@ -55,18 +121,64 @@ const Introduction = styled.article`
     padding: 2px 15px;
     line-height: 1.2;
     margin-left: 20px;
-    font-weight: 400;
+    font-weight: 500;
   }
+
+  ${Responsive.mobile`
+    display: none;
+  `}
 `;
 
 const InnerText = styled.p`
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
+
+  ${Responsive.mobile`
+    display: none;
+  `}
 `;
 
 const Figure = styled.section`
   width: 100%;
   height: 100%;
+
+  ${Responsive.laptop`
+    display: none;
+  `}
+`;
+
+const MobileContainer = styled.header`
+  display: none;
+  padding: 30px 20px;
+  line-height: 1.6;
+
+  h1 {
+    font-weight: 700;
+  }
+
+  h1,
+  h4 {
+    font-size: 1.2rem;
+    color: ${rgba(Color.TUNDORA, 0.3)};
+  }
+
+  mark {
+    color: ${Color.TUNDORA};
+    background-color: ${Color.WHITE};
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  p {
+    line-height: 2;
+    font-size: 0.938rem;
+  }
+
+  ${Responsive.mobile`
+    display: block;
+  `}
 `;
 
 const FigureImage = (src: string, style: React.CSSProperties) => {
@@ -81,25 +193,36 @@ const FigureImage = (src: string, style: React.CSSProperties) => {
 
 export const Cover: React.FC<CoverProps> = ({ content: { cover } }) => {
   return (
-    <Container>
-      <Main>
-        <MainInner>
-          <TextualLogo>M</TextualLogo>
-          <h3>{cover.greeting}</h3>
-          <Introduction>
-            <h4>{cover.introduction}</h4>
-            <mark>Moralis</mark>
-          </Introduction>
-          <InnerText>{cover.description}</InnerText>
-        </MainInner>
-      </Main>
-      <Figure>
-        <ImageLoader
-          preview={require('./assets/self-portrait-small.jpg')}
-          src={require('./assets/self-portrait.jpg')}
-          render={FigureImage}
-        />
-      </Figure>
-    </Container>
+    <>
+      {
+        // @ts-ignore
+        <Container src={require('./assets/self-portrait-small.jpg')}>
+          <Main>
+            <MainInner>
+              <TextualLogo>M</TextualLogo>
+              <h3>{cover.greeting}</h3>
+              <Introduction>
+                <h4>{cover.introduction}</h4>
+                <mark>Moralis</mark>
+              </Introduction>
+              <InnerText>{cover.description}</InnerText>
+            </MainInner>
+          </Main>
+          <Figure>
+            <ImageLoader
+              preview={require('./assets/self-portrait-small.jpg')}
+              src={require('./assets/self-portrait.jpg')}
+              render={FigureImage}
+            />
+          </Figure>
+        </Container>
+      }
+      <MobileContainer>
+        <h1>HELLO,</h1>
+        <h4>{cover.introduction}</h4>
+        <mark>MORALIS</mark>
+        <p>{cover.description}</p>
+      </MobileContainer>
+    </>
   );
 };

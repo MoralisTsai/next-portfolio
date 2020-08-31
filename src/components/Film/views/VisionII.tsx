@@ -1,4 +1,7 @@
 import React from 'react';
+import styled from 'styled-components';
+
+import { Responsive } from 'styles/Responsive';
 
 import { LanguageSchema } from 'localization';
 
@@ -14,10 +17,23 @@ import {
   Play,
   ScreenContainer,
   ScreenImage,
-  CrewRotate,
+  CrewGroup,
   FirstImageRow,
   SecondImageRow,
 } from '../styles/Content';
+
+const CInformation = styled(Information)`
+  ${Responsive.mobile`
+    order: 2;
+  `}
+`;
+
+const CCrewGroup = styled(CrewGroup)`
+  ${Responsive.mobile`
+    order: 1;
+    margin-bottom: 20px;
+  `}
+`;
 
 import { CrewMapping } from '../Shared/CrewMapping';
 
@@ -34,7 +50,7 @@ export const VisionII: React.FC<LanguageSchema> = ({ content }) => {
         award={data.award}
       />
       <InnerContent>
-        <Information>
+        <CInformation>
           <Description>{data.description}</Description>
           <Play
             href='https://vimeo.com/452998152'
@@ -71,8 +87,8 @@ export const VisionII: React.FC<LanguageSchema> = ({ content }) => {
               </ScreenImage>
             </SecondImageRow>
           </ScreenContainer>
-        </Information>
-        <CrewRotate>
+        </CInformation>
+        <CCrewGroup>
           <CrewWrapper>
             <time>05:06 ｜2015</time>
             <CrewColumn>
@@ -86,7 +102,7 @@ export const VisionII: React.FC<LanguageSchema> = ({ content }) => {
               </CrewList>
             </CrewColumn>
           </CrewWrapper>
-        </CrewRotate>
+        </CCrewGroup>
       </InnerContent>
     </>
   );

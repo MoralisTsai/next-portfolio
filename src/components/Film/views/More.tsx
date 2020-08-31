@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { rgba } from 'polished';
 
+import { Responsive } from 'styles/Responsive';
+
 import { LanguageSchema } from 'localization';
 
 import { Color } from 'styles/Color';
@@ -12,12 +14,25 @@ const Wrapper = styled.div`
   margin: auto;
   color: ${Color.WHITE};
   line-height: 1.5;
+
+  ${Responsive.mobile`
+    padding: 0 20px;
+  `}
 `;
 
 const Title = styled.h3`
   font-size: 6.25rem;
   font-weight: 700;
   margin-bottom: 80px;
+
+  ${Responsive.tablet`
+    font-size: 2.188rem;
+    margin-bottom: 50px;
+  `}
+
+  ${Responsive.mobile`
+    margin-bottom: 20px;
+  `}
 `;
 
 const CardParent = styled.div`
@@ -30,10 +45,22 @@ const CardParent = styled.div`
       margin-right: 20px;
     }
   }
+
+  ${Responsive.laptop`
+    flex-flow: column nowrap;
+
+    section {
+      &:not(:last-of-type) {
+        margin: 0;
+        margin-bottom: 30px;
+      }
+    }
+  `}
 `;
 
 const Card = styled.section`
-  max-width: 360px;
+  max-width: 400px;
+  width: 100%;
 
   img {
     width: 100%;
@@ -73,6 +100,23 @@ const Card = styled.section`
     font-size: 1rem;
     line-height: 1.88;
   }
+
+  ${Responsive.laptop`
+    max-width: initial;
+
+    img {
+      height: initial;
+    }
+  `}
+
+  ${Responsive.mobile`
+    a {
+      margin-bottom: 20px;
+    }
+    p {
+      line-height: 2;
+    }
+  `}
 `;
 
 export const More: React.FC<LanguageSchema> = ({ content }) => {

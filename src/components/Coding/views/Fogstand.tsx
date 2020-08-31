@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Responsive } from 'styles/Responsive';
+
 import { LanguageSchema } from 'localization';
 
 import {
@@ -15,6 +17,22 @@ const CCardWrapper = styled(CardWrapper)`
   h2 {
     font-size: 6.25rem;
   }
+
+  ${Responsive.tablet`
+    h2 {
+      font-size: 3rem;
+    }
+  `}
+
+  ${Responsive.mobile`    
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      line-height: 2;
+    }
+  `}
 `;
 
 const FogstandCover = styled.section`
@@ -24,12 +42,24 @@ const FogstandCover = styled.section`
 
 const FogstandFigure = styled.picture`
   opacity: 0.5;
+
   img {
     width: 100%;
     height: 100%;
     position: relative;
     left: -150px;
   }
+
+  ${Responsive.laptop`
+    margin-bottom: 40px;
+    img {
+      left: initial;
+    }
+  `}
+
+  ${Responsive.mobile`
+    margin-bottom: 30px;
+  `}
 `;
 
 const FAArticleWrapper = styled.div`
@@ -46,6 +76,13 @@ const FAArticleWrapper = styled.div`
       line-height: 1.4;
     }
   }
+
+  ${Responsive.laptop`
+    > article {
+      left: initial;
+      top: initial;
+    }
+  `}
 `;
 
 const CScreenshotsWrapper = styled(ScreenshotsWrapper)`

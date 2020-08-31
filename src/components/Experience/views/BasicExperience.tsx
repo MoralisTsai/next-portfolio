@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { rgba } from 'polished';
 
+import { Responsive } from 'styles/Responsive';
 import { Color } from 'styles/Color';
 
 interface ContainerProps {
@@ -19,20 +20,46 @@ const Container = styled.div`
   margin-bottom: 165px;
 
   section:nth-child(1) {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   section:nth-child(2) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   p {
     font-weight: 700;
   }
 
+  ul {
+    padding-left: 20px;
+  }
+
   li {
     list-style: circle;
   }
+
+  ${Responsive.tablet`
+    padding: 0 50px;
+    margin-bottom: 120px;
+
+    section:nth-child(1) {
+      margin-bottom: 40px;
+    }
+
+    section:nth-child(2) {
+      margin-bottom: 10px;
+    }
+  `}
+
+  ${Responsive.mobile`
+    padding: 0 20px;
+    margin-bottom: 100px;
+
+    p {
+      line-height: 2;
+    }
+  `}
 `;
 
 interface JobProps {

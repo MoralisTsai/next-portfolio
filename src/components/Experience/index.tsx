@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Responsive } from 'styles/Responsive';
 import { Color } from 'styles/Color';
 
 import { LanguageSchema } from 'localization';
@@ -12,6 +13,11 @@ const Container = styled.div`
   margin-bottom: 130px;
   max-width: 350px;
   width: 100%;
+
+  ${Responsive.tablet`
+    width: 100%;
+    max-width: initial;
+  `}
 `;
 
 const Title = styled.h2`
@@ -20,6 +26,14 @@ const Title = styled.h2`
   color: ${Color.MINE_SHAFT};
   margin-bottom: 100px;
   text-align: center;
+
+  ${Responsive.tablet`
+    margin-bottom: 80px;
+  `}
+
+  ${Responsive.mobile`
+    margin-bottom: 60px;
+  `}
 `;
 
 const SolidEnd = styled.div`

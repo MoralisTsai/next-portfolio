@@ -14,7 +14,7 @@ import {
   Play,
   ScreenContainer,
   ScreenImage,
-  CrewRotate,
+  CrewGroup,
   FirstImageRow,
   SecondImageRow,
 } from '../styles/Content';
@@ -40,7 +40,7 @@ export const Resonance: React.FC<LanguageSchema> = ({ content }) => {
         award={data.award}
       />
       <InnerContent>
-        <CrewRotate>
+        <CrewGroup>
           <CrewWrapper>
             <time>03:00 ｜2014</time>
             <CrewColumn>
@@ -55,7 +55,7 @@ export const Resonance: React.FC<LanguageSchema> = ({ content }) => {
               </CrewList>
             </CrewColumn>
           </CrewWrapper>
-        </CrewRotate>
+        </CrewGroup>
         <Information>
           <Description>{data.description}</Description>
           <Play

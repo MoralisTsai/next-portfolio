@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Color } from 'styles/Color';
+import { Responsive } from 'styles/Responsive';
 
 import { LanguageSchema } from 'localization';
 
@@ -18,7 +19,17 @@ const Container = styled.div`
 
 const Wrapper = styled.section`
   margin-top: 120px;
-  padding: 0 25px;
+  padding: 0 80px;
+
+  ${Responsive.tablet`
+    padding: 0 30px;
+    margin-top: 80px;
+  `}
+
+  ${Responsive.mobile`
+    padding: 0 20px;
+    margin-top: 20px;
+  `}
 `;
 
 const Header = styled.h2`
@@ -26,6 +37,14 @@ const Header = styled.h2`
   font-weight: 700;
   text-align: center;
   margin-bottom: 130px;
+
+  ${Responsive.laptop`
+    margin-bottom: 20px;
+  `}
+
+  ${Responsive.mobile`
+    font-size: 1.5rem;
+  `}
 `;
 
 export const Coding: React.FC<LanguageSchema> = ({ content }) => {

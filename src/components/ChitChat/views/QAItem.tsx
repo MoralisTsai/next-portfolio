@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Responsive } from 'styles/Responsive';
 import { Color } from 'styles/Color';
 
 const Container = styled.div`
@@ -19,6 +20,17 @@ const Container = styled.div`
     font-size: 1rem;
     font-weight: 100;
   }
+
+  ${Responsive.mobile`
+    margin-bottom: 80px;
+
+    h2 {
+      font-size: 1.3rem;
+    }
+    p {
+      line-height: 2;
+    }
+  `}
 `;
 
 interface QAItemProps {

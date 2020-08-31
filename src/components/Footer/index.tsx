@@ -11,7 +11,7 @@ const Wrapper = styled.footer`
   line-height: 1.88;
   color: ${Color.WHITE};
   font-weight: 100;
-  font-size: 1rem;
+  font-size: 0.85rem;
   text-align: center;
   padding: 40px 20px;
 

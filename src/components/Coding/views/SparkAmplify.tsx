@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Responsive } from 'styles/Responsive';
+
 import { LanguageSchema } from 'localization';
 
 import {
@@ -20,17 +22,37 @@ const TwoSide = styled.section`
   .css-side-item {
     flex: 1 1 50%;
   }
+
+  ${Responsive.laptop`
+    flex-flow: column nowrap;
+    align-items: flex-start;
+
+    .css-side-item {
+      flex: initial;
+    }
+
+    article:nth-child(1) {
+      order: 2;
+    }
+  `}
 `;
 
 const MainPhoto = styled.div`
   width: 100%;
   height: 100%;
   max-width: 750px;
+
+  ${Responsive.laptop`
+    align-self: center;
+    order: 1;
+    margin-bottom: 50px;
+  `}
 `;
 
 const SparkFigure = styled.picture`
   img {
     max-width: 650px;
+    width: 100%;
   }
 `;
 
