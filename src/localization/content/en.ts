@@ -3,12 +3,35 @@ export const en = {
     greeting: 'Hello,',
     introduction: 'My name is',
     description:
-      'As an Indonesian, I’ve been living in Taiwan for eight years. And as an introvert, I still enjoy being around people, and have participated in several international volunteerings. Passionate at disassembling, analyzing and dealing with complex problems. Currently working as a software engineer in a big data media company with three years of software development experience.',
+      'As an Indonesian, I’ve been living in Taiwan for nine years. And as an introvert, I still enjoy being around people, and have participated in several international volunteering. Passionate at disassembling, analyzing and dealing with complex problems. Currently working as a software engineer in a cloud survey service company with four years of software development experience.',
   },
   portfolio: 'PORTFOLIO',
   coding: {
     name: 'Coding',
     items: [
+      {
+        title: 'SurveyCake',
+        description:
+          'Survey solution for modern enterprise.',
+        tech: [
+          {
+            title: 'Written in',
+            description: 'JavaScript / TypeScript',
+          },
+          {
+            title: 'Framework',
+            description: 'React',
+          },
+          {
+            title: 'JSS',
+            description: 'Material UI',
+          },
+          {
+            title: 'State Management',
+            description: 'Redux / RxJS',
+          },
+        ],
+      },
       {
         title: 'SparkAmplify - Intelligent Media Outreach',
         description:
@@ -158,7 +181,7 @@ export const en = {
       email: 'moralis.tsai@gmail.com',
       bachelor: 'Tzu Chi University Department of Communication Studies',
       master:
-        'National Taiwan University Department of Networking and Multimedia',
+        'National Taiwan University Graduate Institute of Networking and Multimedia',
     },
     resume: 'Resume',
   },
@@ -167,8 +190,21 @@ export const en = {
     items: [
       {
         title: 'Software Engineer',
+        company: 'SurveyCake',
+        period: 'Since November 2020',
+        description:
+          'SurveyCake is a convenient and efficient tool that collects feedback from customers through intuitive surveys.',
+        jobs: [
+          'Work closely with UI designer to develop new interface component library specifications and optimize collaboration methods',
+          'Introduce functional programming',
+          'Define flowchart and maintain development documents',
+          'Write unit test',
+        ],
+      },
+      {
+        title: 'Software Engineer',
         company: 'SparkAmplify',
-        period: 'Since September 2017',
+        period: '2017.11 - 2020.10',
         description:
           'SparkAmplify is a SaaS company based in Pasadena, California and Taipei, specializing in media outreach and influencer engagement. The platform provides users target media and journalist profile as well as intelligent recommendations.',
         jobs: [
@@ -229,12 +265,12 @@ export const en = {
       {
         question: 'What do you do during the weekend?',
         answer:
-          "Visiting bookstores, watching movies and expanding my knowledge through O'Reilly Online Learning platform.",
+          "Visiting bookstores, watching movies, hiking and expanding my knowledge through O'Reilly Online Learning platform.",
       },
       {
         question: 'Whose song have you heard the most recently?',
         answer:
-          'Mary See the Future, Hello Nico, SoulFa, Sorry Youth, Fire Ex., Sunset Rollercoaster, deca joins.',
+          'Easy Weeds, SoulFa, Sorry Youth, Fire Ex., Sunset Rollercoaster, deca joins.',
       },
       {
         question:

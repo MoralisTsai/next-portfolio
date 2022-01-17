@@ -44,23 +44,27 @@ const Info = styled.div`
     font-size: 1.125rem;
     line-height: 1.67;
     text-align: center;
-    &:not(:last-of-type) {
-      margin-bottom: 30px;
-    }
+    margin-bottom: 30px;
   }
 
   ${Responsive.mobile`
     p {
       font-size: 1rem;
-      &:not(:last-of-type) {
-        margin-bottom: 20px;
-      }
+      margin-bottom: 20px;
     }
   `}
 `;
 
+const DownloadResume = styled.a`
+  text-decoration: underline;
+
+  &:hover {
+    color: ${Color.TUNDORA};
+  }
+`;
+
 export const Header: React.FC<LanguageSchema> = ({ content }) => {
-  const { title, basic } = content.about;
+  const { title, basic, resume } = content.about;
   return (
     <Container>
       <Title>{title}</Title>
@@ -78,6 +82,9 @@ export const Header: React.FC<LanguageSchema> = ({ content }) => {
         <p>{basic.bachelor}</p>
         <p>{basic.master}</p>
       </Info>
+      <DownloadResume href="https://drive.google.com/file/d/1gMWUSD1oPxLZ068B5wcCnXPZ0H_qmUOx/view" target="_blank" rel='noopener noreferrer'>
+        {resume}
+      </DownloadResume>
     </Container>
   );
 };

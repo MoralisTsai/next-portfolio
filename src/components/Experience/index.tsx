@@ -46,13 +46,14 @@ const SolidEnd = styled.div`
 export const Experience: React.FC<LanguageSchema> = ({ content }) => {
   const { name, items } = content.experience;
 
-  const [sparkAmplify, publicTv, daAiTv] = items;
+  const [surveyCake, sparkAmplify, daAiTv, pts] = items;
   return (
     <Container>
       <Title>{name}</Title>
-      <BasicExperience data={sparkAmplify} />
-      <BasicExperience data={publicTv} light />
+      <BasicExperience data={surveyCake} />
+      <BasicExperience data={sparkAmplify} light />
       <BasicExperience data={daAiTv} light />
+      <BasicExperience data={pts} light />
       <SolidEnd />
     </Container>
   );

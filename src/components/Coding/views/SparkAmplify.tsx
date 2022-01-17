@@ -1,7 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
-
-import { Responsive } from 'styles/Responsive';
 
 import { LanguageSchema } from 'localization';
 
@@ -10,55 +7,12 @@ import {
   CardBasicData,
   CardTechStack,
 } from '../styles/ArticleCard';
-
 import { ScreenshotsWrapper, ScreenshotsRow } from '../styles/Screenshots';
-
-const TwoSide = styled.section`
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
-
-  .css-side-item {
-    flex: 1 1 50%;
-  }
-
-  ${Responsive.laptop`
-    flex-flow: column nowrap;
-    align-items: flex-start;
-
-    .css-side-item {
-      flex: initial;
-    }
-
-    article:nth-child(1) {
-      order: 2;
-    }
-  `}
-`;
-
-const MainPhoto = styled.div`
-  width: 100%;
-  height: 100%;
-  max-width: 750px;
-
-  ${Responsive.laptop`
-    align-self: center;
-    order: 1;
-    margin-bottom: 50px;
-  `}
-`;
-
-const SparkFigure = styled.picture`
-  img {
-    max-width: 650px;
-    width: 100%;
-  }
-`;
+import { TwoSide, FigureWrapper, Figure } from '../styles/PrimaryWrapper';
 
 export const SparkAmplify: React.FC<LanguageSchema> = ({ content }) => {
   const { name, items } = content.coding;
-  const [sparkAmplify] = items;
+  const sparkAmplify = items[1];
 
   return (
     <>
@@ -100,8 +54,8 @@ export const SparkAmplify: React.FC<LanguageSchema> = ({ content }) => {
             ))}
           </div>
         </CardWrapper>
-        <MainPhoto className='css-side-item'>
-          <SparkFigure>
+        <FigureWrapper className='css-side-item'>
+          <Figure>
             <source
               srcSet={require('../assets/spark1.jpg?webp')}
               type='image/webp'
@@ -111,8 +65,8 @@ export const SparkAmplify: React.FC<LanguageSchema> = ({ content }) => {
               type='image/jpeg'
             />
             <img src={require('../assets/spark1.jpg')} />
-          </SparkFigure>
-        </MainPhoto>
+          </Figure>
+        </FigureWrapper>
       </TwoSide>
       <ScreenshotsWrapper>
         <ScreenshotsRow>

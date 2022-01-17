@@ -230,18 +230,18 @@ export const Cover: React.FC<CoverProps> = ({
     <>
       <LanguageOption>
         <LanguageItem
+          onClick={() => changeLanguage('zh')}
+          role="presentation"
+          active={language === 'zh'}
+        >
+          繁
+        </LanguageItem>
+        <LanguageItem
           onClick={() => changeLanguage('en')}
           role='presentation'
           active={language === 'en'}
         >
           EN
-        </LanguageItem>
-        <LanguageItem
-          onClick={() => changeLanguage('zh')}
-          role='presentation'
-          active={language === 'zh'}
-        >
-          繁
         </LanguageItem>
       </LanguageOption>
       {
