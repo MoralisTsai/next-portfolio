@@ -8,5 +8,5 @@ export const language = {
 
 export type LanguageOption = keyof typeof language;
 export type LanguageSchema = {
-  content: typeof language.en;
+  content: typeof language.zh;
 };
