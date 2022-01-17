@@ -4,10 +4,11 @@ import styled from 'styled-components';
 import { Color } from 'styles/Color';
 import { Responsive } from 'styles/Responsive';
 
-import { LanguageSchema } from 'localization';
-
+import { SurveyCake } from './views/SurveyCake';
 import { SparkAmplify } from './views/SparkAmplify';
 import { Fogstand } from './views/Fogstand';
+
+import { CodingProps } from './ts/Coding';
 
 const Container = styled.div`
   max-width: 1440px;
@@ -47,12 +48,13 @@ const Header = styled.h2`
   `}
 `;
 
-export const Coding: React.FC<LanguageSchema> = ({ content }) => {
+export const Coding: React.FC<CodingProps> = ({ content, language }) => {
   const { portfolio } = content;
   return (
     <Container>
       <Wrapper>
         <Header>{portfolio}</Header>
+        <SurveyCake content={content} language={language} />
         <SparkAmplify content={content} />
         <Fogstand content={content} />
       </Wrapper>

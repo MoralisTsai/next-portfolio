@@ -10,7 +10,6 @@ import {
   CardBasicData,
   CardTechStack,
 } from '../styles/ArticleCard';
-
 import { ScreenshotsWrapper, ScreenshotsRow } from '../styles/Screenshots';
 
 const CCardWrapper = styled(CardWrapper)`
@@ -92,7 +91,7 @@ const CScreenshotsWrapper = styled(ScreenshotsWrapper)`
 export const Fogstand: React.FC<LanguageSchema> = ({ content }) => {
   const { name, items } = content.coding;
 
-  const [, fogstand] = items;
+  const fogstand = items[2];
 
   return (
     <>
