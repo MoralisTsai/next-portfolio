@@ -27,7 +27,7 @@ const Wrapper = styled.footer`
 export const Footer: React.FC<LanguageSchema> = ({ content }) => {
   return (
     <Wrapper>
-      <small>Copyright © 2020 Moralis. All Rights Reserved</small>
+      <small>Copyright © 2022 Moralis. All Rights Reserved</small>
       <a
         href='https://github.com/MoralisTsai/next-portfolio'
         target='_blank'
