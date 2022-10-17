@@ -1,4 +1,10 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const withOptimizedImages = require('next-optimized-images');
+/** @type {import('next').NextConfig} */
 
-module.exports = withOptimizedImages();
+const nextConfig = {
+  reactStrictMode: true,
+  compiler: {
+    emotion: true,
+  },
+};
+
+module.exports = nextConfig;

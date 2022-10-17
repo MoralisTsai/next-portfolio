@@ -1,21 +1,16 @@
-import React from 'react';
-import type { AppProps } from 'next/app';
-import Head from 'next/head';
+import { AppProps } from "next/app";
+import createCache from "@emotion/cache";
+import { CacheProvider } from "@emotion/react";
 
-import { Global } from 'styles/Global';
-import { Reset } from 'styles/Reset';
+import { globalStyles } from "styles/Reset";
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-  return (
-    <>
-      <Head>
-        <title>Moralis | Personal Website</title>
-      </Head>
-      <Reset />
-      <Global />
-      <Component {...pageProps} />
-    </>
-  );
-}
+const cache = createCache({ key: "next" });
 
-export default MyApp;
+const App = ({ Component, pageProps }: AppProps) => (
+  <CacheProvider value={cache}>
+    {globalStyles}
+    <Component {...pageProps} />
+  </CacheProvider>
+);
+
+export default App;
